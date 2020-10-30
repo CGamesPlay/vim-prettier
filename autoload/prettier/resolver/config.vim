@@ -9,29 +9,6 @@ function! prettier#resolver#config#resolve(config, hasSelection, start, end) abo
           \ s:Flag_print_width(a:config) . ' ' .
           \ s:Flag_parser(a:config) . ' ' .
           \ s:Flag_range_delimiter(a:config, a:hasSelection, a:start, a:end) . ' ' .
-          \ ' --semi=' .
-          \ get(a:config, 'semi', g:prettier#config#semi) .
-          \ ' --single-quote=' .
-          \ get(a:config, 'singleQuote', g:prettier#config#single_quote) .
-          \ ' --bracket-spacing=' .
-          \ get(a:config, 'bracketSpacing', g:prettier#config#bracket_spacing) .
-          \ ' --jsx-bracket-same-line=' .
-          \ get(a:config, 'jsxBracketSameLine', g:prettier#config#jsx_bracket_same_line) .
-          \ ' --arrow-parens=' .
-          \ get(a:config, 'arrowParens', g:prettier#config#arrow_parens) .
-          \ ' --trailing-comma=' .
-          \ get(a:config, 'trailingComma', g:prettier#config#trailing_comma) .
-          \ ' --config-precedence=' .
-          \ get(a:config, 'configPrecedence', g:prettier#config#config_precedence) .
-          \ ' --prose-wrap=' .
-          \ get(a:config, 'proseWrap', g:prettier#config#prose_wrap) .
-          \ ' --html-whitespace-sensitivity ' .
-          \ get(a:config, 'htmlWhitespaceSensitivity', g:prettier#config#html_whitespace_sensitivity) .
-          \ ' --stdin-filepath="'.simplify(expand('%:p')).'"' .
-          \ ' --require-pragma=' .
-          \ get(a:config, 'requirePragma', g:prettier#config#require_pragma) .
-          \ ' --end-of-line=' .
-          \ get(a:config, 'endOfLine', g:prettier#config#end_of_line) .
           \ ' --loglevel error '.
           \ ' --stdin '
 
